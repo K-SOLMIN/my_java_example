@@ -36,6 +36,5 @@ public class ConditionDemo {
 		//삼항연산자
 		String result = res == 0 ? "짝수입니다." : "홀수입니다.";
 		System.out.println(result);
-		
 	}
 }
