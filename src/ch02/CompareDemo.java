@@ -19,7 +19,10 @@ public class CompareDemo {
 		System.out.println(str5.equalsIgnoreCase(str6)); //대소비교 무시 메소드 true
 		
 		//기초타입 비교
-		
+		System.out.println(1 == 1);
+		System.out.println(true == true);
+		System.out.println(3 > 2);
+		//System.out.println(true > false); 논리타입은 대소비교 불가
 	}
 
 }
