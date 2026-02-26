@@ -21,7 +21,7 @@ public class OperatorDemo {
 		if(Double.isInfinite(res)) System.out.println("무한대 값을 반환했습니다.");
 		else System.out.println(res + 100);
 		
-		double res2 = 5 % 0.0;
+		double res2 = 5 % 0.0; 
 		System.out.println(res2);
 
 		if (Double.isNaN(res2))	System.out.println("숫자가 아닙니다.");
