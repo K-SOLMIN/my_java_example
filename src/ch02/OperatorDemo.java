@@ -1,4 +1,4 @@
-package ch02;
+ package ch02;
 
 public class OperatorDemo {
 	public static void main(String[] args) {
