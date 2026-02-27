@@ -1,11 +1,11 @@
 package com.my;
 
-import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-//		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 //		System.out.print("입력 : " );
 //		String str1 = sc.next();
 //		
@@ -40,14 +40,49 @@ public class Main {
 //		
 //		System.out.println(tax);
 //
-		System.out.println("result : " + (d == 0.3));
+//		System.out.println("result : " + (d == 0.3));
+//		
+//		BigDecimal result;
+//		BigDecimal tax = new BigDecimal("0.1");
+//		BigDecimal tax2 = new BigDecimal("0.2");
+//		result = tax.add(tax2);
+//		
+//		System.out.println("bigDecimalResult : " + (Double.parseDouble(result.toString()) == 0.3));
 		
-		BigDecimal result;
-		BigDecimal tax = new BigDecimal("0.1");
-		BigDecimal tax2 = new BigDecimal("0.2");
-		result = tax.add(tax2);
+//		Person p = new Person();
+//		System.out.println("pre : " + p);
+//		changeValue(p);
+//		System.out.println("next : " + p);
 		
-		System.out.println("bigDecimalResult : " + (Double.parseDouble(result.toString()) == 0.3));
+//		new First(new Second(new Third()));
+		
+//		System.out.println("정수입력 : ");
+//		int num = sc.nextInt();
+//		
+//		sc.nextLine();
+//		
+//		System.out.println("문자 입력 : ");
+//		String str = sc.nextLine();
+		
+		System.out.println("입력 : ");
+		String str2 = sc.next();
+		
+		System.out.println("끝" + str2);
+		
+		String str3 = sc.nextLine();
+		System.out.println("str3  " + str3);
+	}
+	
+	public static void changeValue(Person p) {
+		p = new Person();
+	}
+	
+	public static void First() {
+		System.out.println("First 실행");
+	}
+	
+	public static void Second() {
+		System.out.println("Second 실행");
 	}
 
 }

@@ -9,6 +9,9 @@ public class A {
 		MyMath math = new MyMath();
 		System.out.println(math.add(10L, 20L));
 		System.out.println(math.sub(10L, 20L));
+		
+		System.out.println(math.add(10, 20, 30, 40));
+		System.out.println(math.add(10, 20, 30));
 	}
     
 }
@@ -29,6 +32,26 @@ class MyMath {
 		
 		return a + b;
 	}
+	
+	//메서드 오버로딩
+	//메소드 이름은 같지만 매개변수의 갯수나, 타입, 순서가 다르면 같은 메소드 이름으로 메소드를 만들 수 있다.
+	//리턴타입만 다른것은 메소드 오버로딩으로 볼 수 없다.
+	long add(int a, int b) {
+		return a + b;
+	}
+	
+	long add(int a, int b, int c) {
+		return a + b + c;
+	}
+	
+	long add(int a, int b, int c, int d) {
+		return a + b + c + d;
+	}
+	//메서드 오버로딩
+	
+//	double add(double a, double b) {
+//		return a + b;
+//	}
 	
 	long sub(long a, long b) {
 		return a - b;
