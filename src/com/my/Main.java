@@ -27,19 +27,22 @@ public class Main {
 //		double res = 5 / 0.0;
 //		System.out.println(res + 100);
 //		System.out.println(Double.isInfinite(res));
-		double dZero = 0.1 + 0.2;
-		float fZero = 0.1f;
 		
-		System.out.printf("dZero = %.100f \n", dZero);
-		System.out.printf("fZero = %.100f \n", fZero);
+//		double dZero = 0.1 + 0.2;
+//		float fZero = 0.1f;
+//		
+//		System.out.printf("dZero = %.100f \n", dZero);
+//		System.out.printf("fZero = %.100f \n", fZero);
+//		
+//		
+//		double d = 0.1 + 0.2;
+//		BigDecimal tax = new BigDecimal("0.1");
+//		
+//		System.out.println(tax);
+//
+//		System.out.println("result : " + (d == 0.3));
 		
 		
-		double d = 0.1 + 0.2;
-		BigDecimal tax = new BigDecimal("0.1");
-		
-		System.out.println(tax);
-
-		System.out.println("result : " + (d == 0.3));
 	}
 
 }

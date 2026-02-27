@@ -1,5 +1,7 @@
 package ch03;
 
+import java.util.Scanner;
+
 public class Ex1 {
 	public static void main(String[] args) {
 		//변수릃 활용한 프로그램의 가독성, 재활용, 유지보수성이 높은 프로그램
@@ -22,6 +24,15 @@ public class Ex1 {
 //			System.out.println(i + 1 + " helloworld");
 			System.out.printf("%2d helloworld\n", i + 1);
 		}
+		
+		//while문으로 변경
+		System.out.println("================ while로 변경 =================");
+		int i = 0;
+		while(i < 10) {
+			System.out.printf("%2d helloworld\n", i + 1);
+			i++;
+		}
+		
 //		System.out.println(1 helloworld);
 //		System.out.println(2 helloworld);
 //		System.out.println(3 helloworld); ...
