@@ -35,14 +35,19 @@ public class Main {
 //		System.out.printf("fZero = %.100f \n", fZero);
 //		
 //		
-//		double d = 0.1 + 0.2;
+		double d = 0.1 + 0.2;
 //		BigDecimal tax = new BigDecimal("0.1");
 //		
 //		System.out.println(tax);
 //
-//		System.out.println("result : " + (d == 0.3));
+		System.out.println("result : " + (d == 0.3));
 		
+		BigDecimal result;
+		BigDecimal tax = new BigDecimal("0.1");
+		BigDecimal tax2 = new BigDecimal("0.2");
+		result = tax.add(tax2);
 		
+		System.out.println("bigDecimalResult : " + (Double.parseDouble(result.toString()) == 0.3));
 	}
 
 }
