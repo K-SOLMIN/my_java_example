@@ -18,11 +18,6 @@ public class ProgramingExam1 {
 			System.out.print("선택 > ");
 			choiceNum = sc.nextInt();
 			
-			if(!(choiceNum >= 0 && choiceNum <= 4)) {
-				System.out.println("1 - 4 번 사이의 숫자만 입력 가능합니다.");
-				continue;
-			}
-			
 			switch(choiceNum) {
 				case 1 : {
 					System.out.print("예금액 > ");
@@ -48,6 +43,10 @@ public class ProgramingExam1 {
 				case 4 : {
 					System.out.print("프로그램 종료");
 				} break;
+				default : {
+					System.out.println("1 - 4 입력하세요");
+					continue;
+				}
 			}
 			
 		}
