@@ -1,6 +1,7 @@
 package com.my;
 
 import java.util.Scanner;
+import static com.my.SingleToneTest.getSingleToneTest;
 
 public class Main {
 
@@ -64,13 +65,20 @@ public class Main {
 //		System.out.println("문자 입력 : ");
 //		String str = sc.nextLine();
 		
-		System.out.println("입력 : ");
-		String str2 = sc.next();
+		/*
+		 * System.out.println("입력 : "); String str2 = sc.next();
+		 * 
+		 * System.out.println("끝" + str2);
+		 * 
+		 * String str3 = sc.nextLine(); System.out.println("str3  " + str3);
+		 */
 		
-		System.out.println("끝" + str2);
+		SingleToneTest single1 = getSingleToneTest();
+		SingleToneTest single2 = getSingleToneTest();
+		SingleToneTest single3 = getSingleToneTest();
+		SingleToneTest single4 = getSingleToneTest();
 		
-		String str3 = sc.nextLine();
-		System.out.println("str3  " + str3);
+		System.out.println(single1 + " " + single2 + " " + single3 + " " + single4);
 	}
 	
 	public static void changeValue(Person p) {

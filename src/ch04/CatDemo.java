@@ -23,7 +23,7 @@ public class CatDemo {
 		
 		s1 = "야옹이";
 		System.out.println("문자 s1은 : " + s1);
-		System.out.println("문자 s2은 : " + s2); 
+		System.out.println("문자 s2은 : " + s2);
 	}
 
 }

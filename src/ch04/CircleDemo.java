@@ -8,6 +8,9 @@ public class CircleDemo {
 		//System.out.println("원의 반지름은 : " + circle.radius + "입니다."); //필드 은닉전
 		System.out.println("원의 반지름은 : " + circle.getRadius() + "입니다.");//필드 은닉후
 		
+		Circle circle2 = new Circle(30);
+		System.out.println("원2의 반지름은 : " + circle2.getRadius() + "입니다.");
+		
 		//변수 = 값 --> 값을 왼쪽의 변수에 할당(저장)한다.
 		//circle.radius = 5; //은닉전
 		circle.setRadius(5); //은닉후
