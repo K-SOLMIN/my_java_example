@@ -6,7 +6,7 @@ public class StaticInstanceVarDemo {
 		Circle2 c2 = new Circle2();
 		Circle2.printStaticInfo();
 		
-		Circle2.numOfCircle++;
+		//Circle2.numOfCircle++;
 		Circle2.printStaticInfo();
 		
 		c2.printInfo();
