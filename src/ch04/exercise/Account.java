@@ -47,6 +47,8 @@ public class Account {
 			System.out.print("계좌 주인명 : ");
 			accountOwner = sc.nextLine();
 			
+			sc.nextLine();
+			
 			System.out.println("초기 입금액 : ");
 			balance = sc.nextInt();
 			
@@ -77,9 +79,10 @@ public class Account {
 				balance -= money;
 		}
 		
-		public int accountInquiry() {
-			getAccountView().printManualView("조회");
+		public int accountInquiry(Account[] accounts) {
+			getAccountView().printManualView("계좌목록");
 			
+			getAccountView().accountListView(accounts);
 			return balance;
 		}
 }

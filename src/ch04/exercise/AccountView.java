@@ -25,4 +25,21 @@ public class AccountView {
 		System.out.println(manual);
 		System.out.println("---------");
 	}
+
+	public void accountListView(Account[] accounts) {
+		int count = 0;
+		for(Account ac : accounts) {
+			if(count == 0 && ac == null) {
+				System.out.println("조회된 계좌가 없습니다.");
+				return;
+			} else if(ac == null) {
+				return;
+			}
+			
+			System.out.println(ac.getAccountNumber() + "  " + ac.getAccountOwner() + "  " + ac.getHaveMoney());							
+			
+			count++;
+		}
+		
+	}
 }

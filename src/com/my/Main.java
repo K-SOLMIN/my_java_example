@@ -74,30 +74,33 @@ public class Main {
 		 * String str3 = sc.nextLine(); System.out.println("str3  " + str3);
 		 */
 		
-		SingleToneTest single1 = getSingleToneTest();
-		SingleToneTest single2 = getSingleToneTest();
-		SingleToneTest single3 = getSingleToneTest();
-		SingleToneTest single4 = getSingleToneTest();
+//		SingleToneTest single1 = getSingleToneTest();
+//		SingleToneTest single2 = getSingleToneTest();
+//		SingleToneTest single3 = getSingleToneTest();
+//		SingleToneTest single4 = getSingleToneTest();
+//		
+//		System.out.println(single1 + " " + single2 + " " + single3 + " " + single4);
+//		
+//		ArrayList<Integer> al = new ArrayList<Integer>();
+//				
+//		al.add(10);
+//		al.add(20);
+//		al.add(30);
+//		al.add(50);
+//		al.add(1);
+//		al.add(1000);
+//		al.add(-20);
+//		al.add(-77);
+//		
+//		al.sort((pre, next) -> {return pre - next;});
+//		System.out.println(al);
+//		
+//		al.stream().sorted((pre, next) -> {return pre - next;}).filter(e -> {return e <= 0;});
+//		
+//		System.out.println(al);
 		
-		System.out.println(single1 + " " + single2 + " " + single3 + " " + single4);
-		
-		ArrayList<Integer> al = new ArrayList<Integer>();
-				
-		al.add(10);
-		al.add(20);
-		al.add(30);
-		al.add(50);
-		al.add(1);
-		al.add(1000);
-		al.add(-20);
-		al.add(-77);
-		
-		al.sort((pre, next) -> {return pre - next;});
-		System.out.println(al);
-		
-		al.stream().sorted((pre, next) -> {return pre - next;}).filter(e -> {return e <= 0;});
-		
-		System.out.println(al);
+		Parent parent = new Parent();
+		parent.protectedMethod();
 	}
 	
 	public static void changeValue(Person p) {

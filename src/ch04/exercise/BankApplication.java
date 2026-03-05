@@ -29,7 +29,7 @@ public class BankApplication {
 						
 					createAccountCount++;
 				}
-				case "2" -> System.out.println("조회");
+				case "2" -> account.accountInquiry(accounts);
 				case "3" -> System.out.println("예금");
 				case "4" -> System.out.println("출금");
 				default -> System.out.println("메뉴확인요함");
