@@ -7,10 +7,12 @@ public class Ex05 {
 		
 		//코드추가
 		for(Phone p : phones) {
-			if(p instanceof Telephone) {
-				((Telephone) p).autoAnswering();
-			} else if(p instanceof Smartphone) {
-				((Smartphone) p).playGame();
+			if(p instanceof Smartphone s) {
+//				((Smartphone) p).playGame();
+				s.playGame();
+			} else if(p instanceof Telephone t) {
+//				((Telephone) p).autoAnswering();
+				t.autoAnswering();
 			} else if(p instanceof Phone) {
 				p.talk();
 			}
@@ -21,6 +23,8 @@ public class Ex05 {
 
 class Phone {
 	protected String owner;
+	
+	public Phone() { }
 	
 	public Phone(String owner) {
 		this.owner = owner;
@@ -39,20 +43,24 @@ class Telephone extends Phone {
 		this.when = when;
 	}
 	
+	public Telephone(String owner) {
+		super(owner);
+	}
+	
 	void autoAnswering() {
 		System.out.println(owner + "가 부재중이니 " + when + "에 전화요망");
 	}
 }
 
-class Smartphone extends Phone {
+class Smartphone extends Telephone {
 	private String game;
 	
-	public Smartphone(String name, String game) {
-		super(name);
+	public Smartphone(String owner, String game) {
+		super(owner);
 		this.game = game;
 	}
 	
 	void playGame() {
-		System.out.println(super.owner + "가 " + game + "게임중");
+		System.out.println(owner + "가 " + game + "게임중");
 	}
 }
