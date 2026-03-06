@@ -11,6 +11,7 @@ public class BankApplication {
 		int createAccountCount = 0; //계좌생성횟수 카운트
 		//int money = 0;
 		Account account = new Account();
+		AccountAction action = new Account();
 		Account[] accounts = new Account[2];
 		
 		while(true) {
@@ -29,9 +30,9 @@ public class BankApplication {
 						
 					createAccountCount++;
 				}
-				case "2" -> account.accountInquiry(accounts);
-				case "3" -> System.out.println("예금");
-				case "4" -> System.out.println("출금");
+				case "2" -> action.accountInquiry(accounts);
+				case "3" -> action.depostio(0);
+				case "4" -> action.withdraw(0);
 				default -> System.out.println("메뉴확인요함");
 			}
 		}

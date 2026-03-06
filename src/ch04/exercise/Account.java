@@ -3,7 +3,7 @@ package ch04.exercise;
 import java.util.Scanner;
 import static ch04.exercise.AccountView.getAccountView;
 
-public class Account {
+public class Account implements AccountAction{
 	//비지니스 도메인의 비지니스 로직, 롤 정의되어 있어야 함.
 		private String accountNumber;
 		private String accountOwner;
@@ -35,6 +35,7 @@ public class Account {
 		//메소드 (입금, 출금, 조회)
 		//입금
 		
+		@Override
 		public Account generateAccount(Scanner sc) {
 			String accountNumber;
 			String accountOwner;
@@ -59,6 +60,7 @@ public class Account {
 			}
 		}
 		
+		@Override
 		public boolean depostio(int money) {
 			//overflow고려
 			getAccountView().printManualView("입금");
@@ -72,6 +74,7 @@ public class Account {
 			}
 		}
 		
+		@Override
 		public void withdraw(int money) {
 			getAccountView().printManualView("출금");
 			
@@ -79,6 +82,7 @@ public class Account {
 				balance -= money;
 		}
 		
+		@Override
 		public int accountInquiry(Account[] accounts) {
 			getAccountView().printManualView("계좌목록");
 			
