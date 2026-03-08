@@ -1,11 +1,11 @@
 package ch07.exercise;
 
-public class Ex05 {
-	
-	public static void main(String[] args) {
-		Controller[] c = {new TV(false), new Radio(true);}
- 	}
-}
+//public class Ex05 {
+//	
+//	public static void main(String[] args) {
+//		Controller[] c = {new TV(false), new Radio(true);}
+// 	}
+//}
 
 abstract class Controller {
 	boolean power;
@@ -32,11 +32,11 @@ class TV extends Controller {
 	
 }
 
-class Radio extends Controller {
-
-	@Override
-	String getName() {
-		return "Radio";
-	}
-	
-}
+//class Radio extends Controller {
+//
+//	@Override
+//	String getName() {
+//		return "Radio";
+//	}
+//	
+//}

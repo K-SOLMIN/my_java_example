@@ -3,7 +3,7 @@ package ch04.exercise;
 import java.util.Scanner;
 import static ch04.exercise.AccountView.getAccountView;
 
-public class Account implements AccountAction{
+public class Account implements AccountAble{
 	//비지니스 도메인의 비지니스 로직, 롤 정의되어 있어야 함.
 		private String accountNumber;
 		private String accountOwner;

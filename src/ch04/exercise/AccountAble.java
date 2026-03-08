@@ -2,7 +2,7 @@ package ch04.exercise;
 
 import java.util.Scanner;
 
-public interface AccountAction {
+public interface AccountAble {
 	Account generateAccount(Scanner sc);
 	
 	boolean depostio(int money);
