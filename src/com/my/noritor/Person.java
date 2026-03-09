@@ -1,10 +1,8 @@
-package com.my;
-
-import java.util.Objects;
+package com.my.noritor;
 
 public class Person {
-	String name;
-	int age;
+	private String name;
+	private int age;
 	
 	public Person() {
 		// TODO Auto-generated constructor stub
@@ -37,18 +35,18 @@ public class Person {
 		if(obj == null) return false;
 		
 		if(obj instanceof Person p) {
-			if(this.hashCode() == p.hashCode()) {
+			if(this.name.equals(p.getName())) {
 				return true;
-			}
+			} else {
+				return false;
+			}		
 		}
 		
 		return false;
 	}
-
+	
 	@Override
-	public int hashCode() {
-		return Objects.hash(name, age);
+	public String toString() {
+		return "이름 : " + name + " 나이 : " + age;
 	}
-	
-	
 }

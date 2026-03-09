@@ -81,26 +81,33 @@ public class Main {
 //		
 //		System.out.println(single1 + " " + single2 + " " + single3 + " " + single4);
 //		
-		ArrayList<Integer> al = new ArrayList<Integer>();
-				
-		al.add(10);
-		al.add(20);
-		al.add(30);
-		al.add(50);
-		al.add(1);
-		al.add(1000);
-		al.add(-20);
-		al.add(-77);
+//		ArrayList<Integer> al = new ArrayList<Integer>();
+//				
+//		al.add(10);
+//		al.add(20);
+//		al.add(30);
+//		al.add(50);
+//		al.add(1);
+//		al.add(1000);
+//		al.add(-20);
+//		al.add(-77);
+//		
+//		al.sort((pre, next) -> {return pre - next;});
+//		System.out.println(al);
+//		
+//		al.stream().sorted((pre, next) -> {return pre - next;}).filter(e -> {return e <= 0;});
+//		
+//		System.out.println(al);
+//		
+//		Parent parent = new Parent();
+//		parent.protectedMethod();
 		
-		al.sort((pre, next) -> {return pre - next;});
-		System.out.println(al);
+		Person p = new Person("가나다", 13);
+		Person p2 = new Person("가나라", 13);
 		
-		al.stream().sorted((pre, next) -> {return pre - next;}).filter(e -> {return e <= 0;});
+		System.out.println(p.equals(p2));
 		
-		System.out.println(al);
 		
-		Parent parent = new Parent();
-		parent.protectedMethod();
 	}
 	
 	public static void changeValue(Person p) {
