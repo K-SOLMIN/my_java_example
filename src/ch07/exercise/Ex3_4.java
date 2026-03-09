@@ -1,6 +1,7 @@
 package ch07.exercise;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Ex3_4 {
 	public static void main(String[] args) {
@@ -13,17 +14,25 @@ public class Ex3_4 {
 		people[1] = p2;
 		people[2] = p1;
 		
-		Arrays.sort(people, (pre, next) -> {
-			return next.getAge() - pre.getAge();
-		});
+		System.out.println("========== reverse 전 ===========");
+		System.out.println(Arrays.toString(people));
+		
+		Arrays.sort(people);
+		
+		Collections.reverse(Arrays.asList(people));
+		
+//		Arrays.sort(people, (pre, next) -> {
+//			return next.getAge() - pre.getAge();
+//		});
 		
 		for(Person p : people) {
+			System.out.print("??");
 			System.out.println(p);
 		}
 	}
 }
 
-class Person {
+class Person implements Comparable {
 	private String name;
 	private int age;
 	private int height;
@@ -77,5 +86,14 @@ class Person {
 	public String toString() {
 		return String.format("Person [이름=%s, 나이=%d, 키=%d, 몸무게=%d",
 				name, age, height, weight);
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Person p) {
+			//return p.age - this.age;
+			return this.age - p.age;
+		}
+		return -99999;
 	}
 }

@@ -13,7 +13,7 @@ public class Ex03 {
 		books[0] = b1;
 		books[1] = b2;
 		books[2] = b3;
-		
+		 
 		Arrays.sort(books,
 			new Comparator<Book>() {
 				@Override

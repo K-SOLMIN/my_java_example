@@ -3,7 +3,11 @@ package ch07.exercise;
 public class Ex05 {
 	
 	public static void main(String[] args) {
-		Controller[] c = {new TV(false), new Radio(true);}
+		Controller[] c = {new TV(false), new Radio(true)};
+		
+		for(Controller controller : c) {
+			controller.show();
+		}
  	}
 }
 
@@ -14,7 +18,13 @@ abstract class Controller {
 		this.power = power;
 	}
 	
-	void show() { };
+	void show() {
+		if(power == true) {
+			System.out.println(getName() + "가 켜졌습니다.");
+		} else {
+			System.out.println(getName() + "가 꺼졌습니다.");
+		}
+	};
 	
 	abstract String getName();
 }
@@ -33,7 +43,11 @@ class TV extends Controller {
 }
 
 class Radio extends Controller {
-
+	
+	public Radio(boolean result) {
+		super(result);
+	}
+	
 	@Override
 	String getName() {
 		return "Radio";
