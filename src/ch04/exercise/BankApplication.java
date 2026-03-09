@@ -11,7 +11,7 @@ public class BankApplication {
 		int createAccountCount = 0; //계좌생성횟수 카운트
 		//int money = 0;
 		Account account = new Account();
-		AccountAction action = new Account();
+		AccountAble action = new Account();
 		Account[] accounts = new Account[2];
 		
 		while(true) {
