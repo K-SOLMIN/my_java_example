@@ -1,5 +1,7 @@
 package com.my.noritor;
 
+import java.util.Objects;
+
 public class Person {
 	private String name;
 	private int age;
@@ -31,11 +33,17 @@ public class Person {
 	}
 
 	@Override
+	public int hashCode() {
+		return Objects.hash(age, name);
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if(obj == null) return false;
 		
 		if(obj instanceof Person p) {
-			if(this.name.equals(p.getName())) {
+			if(this.name.equals(p.getName()) &&
+					this.age == p.age) {
 				return true;
 			} else {
 				return false;

@@ -2,8 +2,6 @@ package com.my;
 
 public class Noritor {
 	public static void main(String[] args) {
-		for(int i = 0; i < 100000; i++) {
-			System.out.println(i);
-		}
+		Integer i = 1;
 	}
 }
