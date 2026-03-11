@@ -25,6 +25,13 @@ public class GenericDemo {
 //		
 //		boricha.drink();
 		
+		genericMethod(100);
+		genericMethod("hello");
+		
+	}
+	
+	public static <T> void genericMethod(T data) {
+		System.out.println(data);
 	}
 
 }
@@ -38,6 +45,10 @@ class Cup<T> {
 
 	public void setBeverage(T t) {
 		this.beverage = t;
+	}
+	
+	public <T> void any(T any) {
+		
 	}
 }
 
