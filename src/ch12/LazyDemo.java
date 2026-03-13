@@ -25,7 +25,7 @@ public class LazyDemo {
 			})
 			.forEach(i -> System.out.println("forEach : " + i));
 		
-//		IntStream is1 = IntStream.iterate(100, i -> i * 2); //is1, is2, ds는 무한 strema이지만 
+//		IntStream is1 = IntStream.iterate(100, i -> i * 2); //is1, is2, ds는 무한 stream이지만 
 //		is1.forEach(System.out::println);                   // Stream.limit()을 하면 매개변수로 넣어준 횟수만큼 실행된다.
 		
 //		IntStream is2 = new Random().ints(0, 100);

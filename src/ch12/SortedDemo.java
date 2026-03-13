@@ -12,8 +12,9 @@ public class SortedDemo {
 		System.out.println();
 		System.out.println("================= 국가 이름 순서(내림차순) ================");
 		
+		//comparator 람다식, Comparator.comparing(비교기준), Comparator.comparing(비교기준).reversed()
 		Nation.nations.stream()
-						.sorted(Comparator.comparing(Nation::getName).reversed()) //comparator 람다식, Comparator.comparing(비교기준), Comparator.comparing(비교기준).reversed()
+						.sorted(Comparator.comparing(Nation::getName ).reversed()) 
 						.forEach(Util::printWithParenthesis);
 		
 		System.out.println();

@@ -1,6 +1,8 @@
 package ch11;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class IteratorDemo {
@@ -26,9 +28,19 @@ public class IteratorDemo {
 		
 		list.add("a");
 		list.add("b");
-		list.add("c");
+		list.add("c"); 
 		
 		System.out.println(list);
+		
+		Collection<String> list1 = Arrays.asList("다람쥐", "개구리", "나비");
+		Iterator<String> it = list1.iterator();
+		
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
+		it = list1.iterator();
+		System.out.println(it.next());
 	}
 
 }
