@@ -18,7 +18,7 @@ public class Ex07 {
 		long totalScore = 0L; // 점수 합계를 저장하는 변수
 		double mean = 0.0; // 평균 점수를 저장하는 변수
 		
-		for (int i = 0; i < 1000000; i++) {
+		for (int i = 0; i < 10000; i++) {
             map.put("user" + i, (int)(Math.random() * 101)); // 0~100 점수
         }
 		
@@ -34,11 +34,15 @@ public class Ex07 {
 			if(maxScore < element.getValue()) {
 				maxScore = element.getValue();
 				maxName = element.getKey() + " ";
+			} else if(maxScore == element.getValue()) {
+				maxName += element.getKey() + " ";
 			}
 			
 			if(minScore > element.getValue()) {
 				minScore = element.getValue();
-				minName = element.getKey();
+				minName = element.getKey() + " ";
+			} else if(minScore == element.getValue()) {
+				minName += element.getKey() + " ";
 			}
 			
 			totalScore += element.getValue();
