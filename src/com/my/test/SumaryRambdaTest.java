@@ -1,39 +1,24 @@
 package com.my.test;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class SumaryRambdaTest {
 	public static void main(String[] args) {
-		//OuterClass2.InnerClass inner = new OuterClass2().new InnerClass(3);
-		//System.out.println(inner.getOutInt());
-		
-//		OuterInterface outer = new OuterInterface() {
-//
-//			@Override
-//			public void force() {
-//				// TODO Auto-generated method stub
-//				
-//			}
-//		};
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			try {
+				sc.nextInt();
+			} catch(InputMismatchException e) {
+				System.out.println("숫자만 ㄱㄴ");
+				sc.nextLine();
+			}
+		}
 	}
 }
 
 class OuterClass2 {
-	private int outInt;
-	//private String outStr;
 	
-	private
-	
-	class InnerClass {
-		public InnerClass(int num) {
-			outInt = num;
-		}
-		
-		public int getOutInt() {
-			return outInt;
-		}
-	}
-	
-	
-		
 	
 }
 
