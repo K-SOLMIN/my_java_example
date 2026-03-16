@@ -17,13 +17,15 @@ public class Ex06 {
 			if(randomNum.size() > 6) break;
 		}
 		
-		List<Integer> ranNumList = Arrays.asList(randomNum.toArray(new Integer[randomNum.size()]));
+//		List<Integer> ranNumList = Arrays.asList(randomNum.toArray(new Integer[randomNum.size()]));
+		
+		Integer[] ranNumArr = randomNum.toArray(new Integer[randomNum.size()]);
+		
+		List<Integer> ranNumList = Arrays.asList(ranNumArr);
 		
 		Collections.sort(ranNumList);
 		
 		ranNumList.forEach(num -> System.out.print(num + " "));
-		
-		
 	}
 }
 
