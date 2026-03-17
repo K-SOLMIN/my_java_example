@@ -1,0 +1,79 @@
+package data_structure;
+
+public class LStack<E> {
+	private Node top;
+	private int size;
+
+	public LStack() {
+		top = null;
+		size = 0;
+	}
+
+	public int size() {
+		return size;
+	}
+
+	private class Node {
+		E item;
+		Node next;
+
+		private Node(E item, Node next) {
+			this.item = item;
+			this.next = next;
+		}
+
+	}
+	
+	E peek() {
+		return top.item;
+	}
+
+	void push(E item) {
+		// 1단계 : 새로운 노드를 생성한 후 node의 값을 설정한다음
+		// 새로 생성된 노드가 맨 앞으로 가도록 한다.
+		// < === 1) 여기를 구현한다.
+		Node newNode = new Node(item, top);
+		// 2단계 : 현재 데이터가 없는 경우, 즉 빈 리스트인 경우
+		// head 와 tail 모두 newNode 가 되도록 처리한다.
+		// 리스트에 데이터가 있을 경우에는 head 만 새로 추가된 노드로 변경해준다.
+		// < === 2) 여기를 구현한다.
+//		if (size == 0) {
+//			tail = newNode;
+//		}
+		top = newNode;
+		// 3단계
+		// 데이터가 하나 추가되었기 때문에 리스트의 사이즈를 하나 증가시킨다.
+		// < === 3) 여기를 구현한다.
+		size++;
+	}
+
+	E pop() { // removeFirst()
+		Node removedNode = top; //지워질 노드를 먼저 저장한다.
+		top = top.next;
+		removedNode.next = null;
+//		if (size == 1) {
+//			head = tail = null;
+//		}
+		size--;
+		return removedNode.item;
+	}
+	
+	boolean isEmpty() {
+		if(size == 0) return true;
+		else return false;
+	}
+
+	@Override
+	public String toString() {
+		String list = "[";
+		for (Node n = top; n != null; n = n.next) {
+			if (n.next != null) {
+				list += n.item + ",";
+			} else {
+				list += n.item;
+			}
+		}
+		
+		return "SLinkedList" + list + "]";
+	}
+}

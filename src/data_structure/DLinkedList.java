@@ -1,0 +1,111 @@
+package data_structure;
+
+public class DLinkedList<E> {
+
+	private Node head;
+	private Node tail;
+	private int size;
+
+	public DLinkedList() {
+			head = tail = null;
+			size = 0;
+		}
+
+	public int size() {
+		return size;
+	}
+
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
+	private class Node {
+		E item;
+		Node next;
+
+		public Node(E item, Node next) {
+			this.item = item;
+			this.next = next;
+		}
+
+	}
+
+	E get(int index) {
+		if (index == 0) {
+			return head.item;
+		}
+		return getNode(index).item;
+	}
+
+	Node getNode(int index) {
+		Node find = head;
+		// System.out.println(find.item);
+		for (int i = 0; i < index; i++) {
+			// System.out.println(find.item);
+			find = find.next;
+		}
+		return find;
+	}
+
+	void addLast(E item) {
+		Node newNode = new Node(item, null);
+//	        newNode.item = item;
+//	        newNode.next = tail;
+		if (size == 0) { // head == tail && head == null
+			head = newNode;
+		} else {
+			tail.next = newNode;
+		}
+		tail = newNode;
+		size++;
+	}
+
+	void addFirst(E item) {
+		// 1단계 : 새로운 노드를 생성한 후 node의 값을 설정한다음
+		// 새로 생성된 노드가 맨 앞으로 가도록 한다.
+		// < === 1) 여기를 구현한다.
+		Node newNode = new Node(item, head);
+		// 2단계 : 현재 데이터가 없는 경우, 즉 빈 리스트인 경우
+		// head 와 tail 모두 newNode 가 되도록 처리한다.
+		// 리스트에 데이터가 있을 경우에는 head 만 새로 추가된 노드로 변경해준다.
+		// < === 2) 여기를 구현한다.
+		if (size == 0) {
+			tail = newNode;
+		}
+		head = newNode;
+		// 3단계
+		// 데이터가 하나 추가되었기 때문에 리스트의 사이즈를 하나 증가시킨다.
+		// < === 3) 여기를 구현한다.
+		size++;
+	}
+
+	E remove() { // removeFirst()
+		Node removedNode = head; // 지워질 노드를 먼저 저장한다.
+		head = head.next; //
+		removedNode.next = null;
+		if (size == 1) {
+			head = tail = null;
+		}
+		size--;
+		return removedNode.item;
+	}
+
+	E removeFirst() {
+		return remove();
+	}
+
+	@Override
+	public String toString() {
+		String list = "[";
+		for (Node n = head; n != null; n = n.next) {
+			if (n.next != null) {
+				list += n.item + ",";
+			} else {
+				list += n.item;
+			}
+		}
+		;
+		return "SLinkedList" + list + "]";
+	}
+
+}
