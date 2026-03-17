@@ -1,5 +1,7 @@
 package com.my.noritor;
 
+import java.util.Arrays;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -22,6 +24,21 @@ public class Main {
 //		System.out.println("Aa".hashCode() == "BB".hashCode());
 //		
 //		System.gc();
+		
+		String[] strArr = {"a", "b", "c", "d"};
+		String[] strArr2 = new String[strArr.length * 2];
+		
+		for(int i = 0; i < strArr2.length; i++) {
+			if(i < strArr.length) {
+				strArr2[i] = strArr[i];
+			} else {
+				strArr2[i] = null;
+			}
+		}
+		
+		System.out.println(Arrays.toString(strArr2) + " " + strArr2.length);
+		
+		
 	}
 
 }

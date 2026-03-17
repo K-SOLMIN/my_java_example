@@ -18,16 +18,19 @@ public class SynchronizedDemo {
 }
 
 class SharedCar {
-	public synchronized void drive(String driver, String where) {
-		System.out.println(driver + "가 자동차에 탔습니다.");
-		
-		Random random = new Random();
-		
-		for(int i = 0; i < random.nextInt(1, 4); i++) {
-			System.out.println(driver + "가 " + where + "로 운전중입니다.");	
+//	synchronized
+	public void drive(String driver, String where) {
+		synchronized(this) {
+			System.out.println(driver + "가 자동차에 탔습니다.");
+			
+			Random random = new Random();
+			
+			for(int i = 0; i < random.nextInt(1, 4); i++) {
+				System.out.println(driver + "가 " + where + "로 운전중입니다.");	
+			}
+			
+			System.out.println(driver + "가 " + where + "에 도착했습니다.");
 		}
-		
-		System.out.println(driver + "가 " + where + "에 도착했습니다.");
 	}
 }
 

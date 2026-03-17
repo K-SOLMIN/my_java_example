@@ -11,6 +11,8 @@ public class Test {
 		while(true) {
 			System.out.print(random.nextInt(10) + " ");
 		}
+		
+		
 	}
 }
 

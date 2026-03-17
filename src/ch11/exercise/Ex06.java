@@ -1,6 +1,6 @@
 package ch11.exercise;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -17,11 +17,7 @@ public class Ex06 {
 			if(randomNum.size() > 6) break;
 		}
 		
-//		List<Integer> ranNumList = Arrays.asList(randomNum.toArray(new Integer[randomNum.size()]));
-		
-		Integer[] ranNumArr = randomNum.toArray(new Integer[randomNum.size()]);
-		
-		List<Integer> ranNumList = Arrays.asList(ranNumArr);
+		List<Integer> ranNumList = new ArrayList<>(randomNum);
 		
 		Collections.sort(ranNumList);
 		

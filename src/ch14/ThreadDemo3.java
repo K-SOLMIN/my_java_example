@@ -1,5 +1,7 @@
 package ch14;
 
+import java.util.Collections;
+
 public class ThreadDemo3 {
 	
 	public static void main(String[] args) {
@@ -56,6 +58,7 @@ public class ThreadDemo3 {
 		t2.start();
 //		t.run(); //내가 할 건 아님(싱글스레드)  
 //		t2.run();
+
 		
 		for (int i = 0; i < 5; i++) {
 			System.out.println(Thread.currentThread().getName() + " hello " + (i + 1));
